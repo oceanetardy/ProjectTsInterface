@@ -1,4 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
+import Title from "./components/Title";
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,7 +18,7 @@ const App : FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        {/*<Title title="essai de titre"  subtitle='test'  complement="base 1"/>*/}
+        <Title title="essai de titre"  subtitle='test'  complement="base 1"/>
         <img src={logo} className="App-logo" alt="logo" />
           <button onClick={add}>Add One </button>
 
@@ -35,27 +36,5 @@ const App : FC = () => {
       </header>
     </div>
   );
-}
-interface PropTitle {
-  title : string;
-  subtitle : string;
-    complement? : string;
-    // ? Donc optionnel
-
-}
-
-const Title :FC<PropTitle> = ({title, subtitle, complement})=>{
-    const [color,setColor] = useState<string>();
-    const changeColor = ()=>{
-        color === "red" ? setColor("yellow") : setColor("red");
-    }
-  return(
-      <>
-      <h1>{title} - {color}</h1>
-      <h2>{subtitle}  - {color}</h2>
-          {complement && <h3>{complement}</h3>}
-          <button onClick={changeColor}>TEST </button>
-      </>
-  )
 }
 export default App;
