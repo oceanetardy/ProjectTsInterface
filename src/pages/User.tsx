@@ -15,7 +15,7 @@ const User:FC = ()=>{
 
                 <div> <ListUsers /></div>
 
-            <button ><a href={'/home'}>Retour </a></button>
+            <button ><a href={'/'}>Retour </a></button>
 
 
 

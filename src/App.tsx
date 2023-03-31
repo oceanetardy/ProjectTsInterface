@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import './assets/css/App.css';
-import ListUsers from "./components/ListUsers";
-import ListTasks from "./components/ListTasks";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
+import User from "./pages/User";
+import Tasks from "./pages/Tasks";
+
 
 const App : FC = () => {
 
@@ -14,8 +15,8 @@ const App : FC = () => {
         <Router>
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/users' element={<ListUsers />} />
-                <Route path='/tasks' element={<ListTasks />} />
+                <Route path='/users' element={<User />} />
+                <Route path='/tasks' element={<Tasks />} />
             </Routes>
         </Router>
 
