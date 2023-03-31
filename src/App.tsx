@@ -6,7 +6,7 @@ const App : FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Title title="essai de titre"  subtitle='test' />
+        <Title title="essai de titre"  subtitle='test'  complement="base 1"/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -26,13 +26,16 @@ const App : FC = () => {
 interface PropTitle {
   title : string;
   subtitle : string;
+    complement? : string;
+
 }
 
-const Title :FC<PropTitle> = ({title, subtitle})=>{
+const Title :FC<PropTitle> = ({title, subtitle, complement})=>{
   return(
       <>
       <h1>{title}</h1>
       <h2>{subtitle}</h2>
+          {complement && <h3>{complement}</h3>}
       </>
   )
 }
