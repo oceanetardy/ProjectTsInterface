@@ -1,14 +1,24 @@
-import React, {FC, useState} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 const App : FC = () => {
+    const [count, setCount] = useState(0);
+    const add = ()=>{
+        setCount(count +1 );
+    }
+
+    useEffect( () =>{
+        document.title = "mon titre " + count;
+    })
   return (
     <div className="App">
       <header className="App-header">
-        <Title title="essai de titre"  subtitle='test'  complement="base 1"/>
+        {/*<Title title="essai de titre"  subtitle='test'  complement="base 1"/>*/}
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+          <button onClick={add}>Add One </button>
+
+          <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
