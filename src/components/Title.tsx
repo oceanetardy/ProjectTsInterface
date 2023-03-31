@@ -10,15 +10,14 @@ interface PropTitle {
 
 const Title :FC<PropTitle> = ({title, subtitle, complement})=>{
     const [color,setColor] = useState<string>();
-    const changeColor = ()=>{
-        color === "red" ? setColor("yellow") : setColor("red");
-    }
+    // const changeColor = ()=>{
+    //     color === "red" ? setColor("yellow") : setColor("red");
+    // }
     return(
         <>
-            <h1>{title} - {color}</h1>
-            <h2>{subtitle}  - {color}</h2>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
             {complement && <h3>{complement}</h3>}
-            <button onClick={changeColor}>TEST </button>
         </>
     )
 }

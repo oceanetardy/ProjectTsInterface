@@ -19,10 +19,10 @@ const App : FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <ListUsers/>
-          <Title title="essai de titre"  subtitle='test'  complement="base 1"/>
-        <img src={logo} className="App-logo" alt="logo" />
-          <button onClick={add}>Add One </button>
+          <Title title="PROJET NFP 119"  subtitle='Application de gestion de tâches'  complement="Node JS / React / MongoDB"/>
+          <ListUsers/>
+
+          <img src={logo} className="App-logo" alt="logo" />
 
           <p>
           Edit <code>src/App.tsx</code> and save to reload.

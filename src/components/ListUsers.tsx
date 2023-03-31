@@ -17,11 +17,11 @@ const  ListUsers: FC = ()=>{
 
     return (
         <div>
-            <h3>Liste Users</h3>
+            <h3>Liste des utilisateurs</h3>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>NOM</th>
+                    <th>EMAIL</th>
                 </tr>
                 {users.map((val, key)=>{
                     return (
