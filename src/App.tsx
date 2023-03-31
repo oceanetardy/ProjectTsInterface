@@ -10,7 +10,7 @@ const App : FC = () => {
 
     useEffect( () =>{
         document.title = "mon titre " + count;
-    })
+    }, [count])
   return (
     <div className="App">
       <header className="App-header">
