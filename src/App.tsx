@@ -13,7 +13,7 @@ const App : FC = () => {
 
     useEffect( () =>{
         document.title = "mon titre " + value;
-    }, [count])
+    }, [value])
   return (
     <div className="App">
       <header className="App-header">
