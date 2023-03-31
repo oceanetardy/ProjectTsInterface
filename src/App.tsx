@@ -4,12 +4,15 @@ import './App.css';
 
 const App : FC = () => {
     const [count, setCount] = useState(0);
+    const [value, setValue] = useState("Zero");
+
     const add = ()=>{
+        if(count > 5) setValue("debord");
         setCount(count +1 );
     }
 
     useEffect( () =>{
-        document.title = "mon titre " + count;
+        document.title = "mon titre " + value;
     }, [count])
   return (
     <div className="App">
