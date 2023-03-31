@@ -1,4 +1,4 @@
-import {FC, useState, useEffect, Dispatch} from "react";
+import React, {FC, useState, useEffect, Dispatch} from "react";
 import User from "../types/User";
 import {getUsers} from "../services/user.service";
 
@@ -22,6 +22,7 @@ const  ListUsers: FC = ()=>{
                 <tr>
                     <th>NOM</th>
                     <th>EMAIL</th>
+                    <th>ACTION</th>
                 </tr>
                 {users.map((val, key)=>{
                     return (

@@ -2,7 +2,7 @@ import {FC} from "react";
 
 const Footer:FC = () =>{
     return (
-        <h1>FOOTER</h1>
+        <span>Application de tâches crée avec NodeJS, MongoDB et React</span>
     )
 }
 

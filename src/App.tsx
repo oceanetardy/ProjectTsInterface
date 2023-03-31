@@ -3,6 +3,7 @@ import Title from "./components/Title";
 import logo from './assets/logo.svg';
 import './assets/css/App.css';
 import ListUsers from "./components/ListUsers";
+import Footer from "./components/Footer";
 
 const App : FC = () => {
     const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ const App : FC = () => {
     <div className="App">
       <header className="App-header">
           <Title title="PROJET NFP 119"  subtitle='Application de gestion de tâches'  complement="Node JS / React / MongoDB"/>
+          <button onClick={add}>Ajouter un utilisateur </button>
           <ListUsers/>
 
           <img src={logo} className="App-logo" alt="logo" />
@@ -35,6 +37,8 @@ const App : FC = () => {
         >
           Learn React
         </a>
+          <Footer/>
+
       </header>
     </div>
   );
