@@ -2,6 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import Title from "./components/Title";
 import logo from './assets/logo.svg';
 import './assets/css/App.css';
+import ListUsers from "./components/ListUsers";
 
 const App : FC = () => {
     const [count, setCount] = useState(0);
@@ -18,7 +19,8 @@ const App : FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Title title="essai de titre"  subtitle='test'  complement="base 1"/>
+        <ListUsers/>
+          <Title title="essai de titre"  subtitle='test'  complement="base 1"/>
         <img src={logo} className="App-logo" alt="logo" />
           <button onClick={add}>Add One </button>
 
