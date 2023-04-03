@@ -9,8 +9,7 @@ const Home:FC = () =>{
     return (
 <header className="App-header">
     <Title title="PROJET NFP 119"  subtitle='Application de gestion de tâches'  complement="Node JS / React / MongoDB"/>
-    <button ><a href={'/users'}>Voir tous les utilisateurs </a></button>
-    <button ><a href={'/tasks'}>Voir toutes les tâches </a></button>
+
 
 
     <img src={logo} className="App-logo" alt="logo" />

@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import User from "./pages/User";
 import Tasks from "./pages/Tasks";
+import Navbar from "./components/navbar";
+
 
 
 const App : FC = () => {
@@ -13,6 +15,7 @@ const App : FC = () => {
 
     <div className="App">
         <Router>
+            <Navbar />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/users' element={<User />} />
