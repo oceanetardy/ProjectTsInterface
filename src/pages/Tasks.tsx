@@ -15,7 +15,6 @@ const Tasks:FC = ()=>{
 
                 <div> <ListTasks /></div>
 
-            <button ><a href={'/'}>Retour </a></button>
 
 
             <img src={logo} className="App-logo" alt="logo" />
