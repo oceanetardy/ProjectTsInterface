@@ -15,7 +15,12 @@ const User:FC = ()=>{
 
                 <div> <ListUsers /></div>
 
-
+            <a
+                className="App-link"
+                href="http://localhost:3000/adduser"
+            >
+                Ajouter un utilisateur
+            </a>
 
             <Footer/>
 
