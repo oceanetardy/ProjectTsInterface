@@ -15,21 +15,14 @@ const Tasks:FC = ()=>{
 
                 <div> <ListTasks /></div>
 
-
-
-            <img src={logo} className="App-logo" alt="logo" />
-
-            <p>
-                Edit <code>src/App.tsx</code> and save to reload.
-            </p>
             <a
                 className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="http://localhost:3000/addtask"
             >
-                Learn React
+                Ajouter une tâche
             </a>
+
+
             <Footer/>
 
         </header>
