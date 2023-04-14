@@ -3,6 +3,8 @@ import Task from "../types/Task";
 
 const  ListTasks: FC = ()=>{
     const [tasks, setTasks] = useState<Task[]>([]);
+    const [refresh] = useState(0);
+
 
     useEffect( ()=>{
         const getData = async ()=>{
@@ -12,7 +14,7 @@ const  ListTasks: FC = ()=>{
                 setTasks(tasks);
         }
         getData();
-    },[tasks]);
+    },[refresh]);
 
     return (
         <div>

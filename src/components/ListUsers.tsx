@@ -4,6 +4,7 @@ import {getUsers} from "../services/user.service";
 
 const  ListUsers: FC = ()=>{
     const [users, setUsers] = useState<User[]>([]);
+    const [refresh] = useState(0);
 
     useEffect( ()=>{
         const getData = async ()=>{
@@ -13,7 +14,7 @@ const  ListUsers: FC = ()=>{
                 setUsers(users);
         }
         getData();
-    },[users]);
+    },[refresh]);
 
     return (
         <div>
