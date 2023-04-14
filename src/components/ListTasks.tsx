@@ -20,15 +20,16 @@ const  ListTasks: FC = ()=>{
         <div>
             <h3>Liste des tâches</h3>
             <table>
+                <thead>
                 <tr>
                     <th>ID USER</th>
                     <th>NAME</th>
                     <th>DETAIL</th>
                     <th>STATUT</th>
                     <th>DATE</th>
-
-
                 </tr>
+                </thead>
+                <tbody>
                 {tasks.map((val, key)=>{
                     return (
                         <tr key={key}>
@@ -37,13 +38,12 @@ const  ListTasks: FC = ()=>{
                             <td>{val.detail}</td>
                             <td>{val.status}</td>
                             {/*<td>{val.date}</td>*/}
-
-
-
                         </tr>
                     )
                     }
                 )}
+                </tbody>
+
             </table>
         </div>
 

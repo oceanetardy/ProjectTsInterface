@@ -20,20 +20,25 @@ const  ListUsers: FC = ()=>{
         <div>
             <h3>Liste des utilisateurs</h3>
             <table>
+                <thead>
                 <tr>
                     <th>NOM</th>
                     <th>EMAIL</th>
                     <th>ACTION</th>
                 </tr>
+                </thead>
+                <tbody>
                 {users.map((val, key)=>{
                     return (
                         <tr key={key}>
                             <td>{val.name}</td>
                             <td>{val.email}</td>
                         </tr>
-                    )
-                    }
+                    )}
                 )}
+                </tbody>
+
+
             </table>
         </div>
 
