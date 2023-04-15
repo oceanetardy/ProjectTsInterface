@@ -1,5 +1,8 @@
 import React, {FC, useState, useEffect, Dispatch} from "react";
 import Task from "../types/Task";
+import User from "../types/User";
+import {getUsers} from "../services/user.service";
+import {getTask} from "../services/task.service";
 
 const  ListTasks: FC = ()=>{
     const [tasks, setTasks] = useState<Task[]>([]);
@@ -8,10 +11,9 @@ const  ListTasks: FC = ()=>{
 
     useEffect( ()=>{
         const getData = async ()=>{
-            const response = await fetch('http://localhost:8080/tasks');
-            const tasks:Task[] = await response.json();
+            const tasks: Task[] = await getTask();
             console.log(tasks);
-                setTasks(tasks);
+            setTasks(tasks);
         }
         getData();
     },[refresh]);
