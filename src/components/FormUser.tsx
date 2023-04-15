@@ -17,19 +17,17 @@ const FormUser:FC = () =>{
 
     };
 
-    // const validationSchema = Yup.object({
-    //     firstName: Yup.string().min(3,"La longueur minimale n'est pas respectée").required('Le prénom est requis'),
-    //     lastName: Yup.string().required('Le nom de famille est requis'),
-    //     email: Yup.string().email('Adresse email invalide').required('L\'adresse email est requise'),
-    //     password: Yup.string().min(6, 'Le mot de passe doit comporter au moins 6 caractères').required('Le mot de passe est requis'),
-    // });
+    const validationSchema = Yup.object({
+        name: Yup.string().min(3,"La longueur minimale n'est pas respectée").required('Le prénom est requis'),
+        email: Yup.string().email('Adresse email invalide').required('L\'adresse email est requise'),
+    });
 
     const onSubmit = (values: FormValues) => {
         console.log(values);
     };
     const formik = useFormik({
         initialValues,
-        // validationSchema,
+        validationSchema,
         onSubmit
     });
     return (
