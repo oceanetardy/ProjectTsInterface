@@ -8,8 +8,7 @@ const  ListUsers: FC = ()=>{
 
     useEffect( ()=>{
         const getData = async ()=>{
-            const response = await fetch('http://localhost:8080/users');
-            const users:User[] = await response.json();
+            const users: User[] = await getUsers();
             console.log(users);
                 setUsers(users);
         }
