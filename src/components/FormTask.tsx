@@ -84,3 +84,74 @@ const FormTask:FC = () =>{
 }
 
 export default FormTask;
+
+
+
+// import {useFormik} from "formik";
+// import * as Yup from 'yup';
+// import React, {useState} from "react";
+//
+// interface FormProps {
+//     onSubmit: (formData: FormData) => void;
+// }
+//
+//
+// interface FormData {
+//     user: String
+//     name : String
+//     detail : String,
+//     status : Boolean,
+//     // date : Date
+// }
+//
+// const FormTask = ({ onSubmit }: FormProps) => {
+//     const [formData, setFormData] = useState<FormData>({
+//         user: "",
+//         name : "",
+//         detail : "",
+//         status : false,
+//         // date : Date
+//     });
+//
+//     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+//         const { name, value } = event.target;
+//         console.log(value);
+//         setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+//     };
+//
+//     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+//         event.preventDefault();
+//         onSubmit(formData);
+//         setFormData({ user: "", name: "", detail : "",
+//             status : false, });
+//     };
+//
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <label>
+//                 Nom :
+//                 <input
+//                     type="text"
+//                     name="name"
+//                     value={formData.user}
+//                     onChange={handleChange}
+//                 />
+//             </label>
+//
+//             <label>
+//                 Email :
+//                 <input
+//                     type="text  "
+//                     name="email"
+//                     value={formData.email}
+//                     onChange={handleChange}
+//                 />
+//             </label>
+//             <button type="submit">Envoyer</button>
+//         </form>
+//     );
+//
+//
+// }
+//
+// export default FormTask;
