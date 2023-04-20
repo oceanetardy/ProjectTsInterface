@@ -1,7 +1,5 @@
 import React, {FC, useState, useEffect, Dispatch} from "react";
 import Task from "../types/Task";
-import User from "../types/User";
-import {getUsers} from "../services/user.service";
 import {getTask} from "../services/task.service";
 
 const  ListTasks: FC = ()=>{
@@ -35,11 +33,11 @@ const  ListTasks: FC = ()=>{
                 {tasks.map((val, key)=>{
                     return (
                         <tr key={key}>
-                            <td>{val.idUser}</td>
+                            <td>{val.user}</td>
                             <td>{val.name}</td>
                             <td>{val.detail}</td>
                             <td>{val.status}</td>
-                            {/*<td>{val.date}</td>*/}
+                            <td>{val.date}</td>
                         </tr>
                     )
                     }

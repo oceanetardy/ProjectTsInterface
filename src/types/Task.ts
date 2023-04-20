@@ -1,7 +1,9 @@
+
 export default interface Task{
-    idUser : string;
+    user : string;
+    email : string;
     name : string;
     detail : string;
-    status : boolean;
-    date : Date;
+    status : string;
+    date : string;
 }
