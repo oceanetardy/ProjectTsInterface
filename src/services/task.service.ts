@@ -8,6 +8,13 @@ const getTask = async ():Promise<Task[]>=>{
 
 }
 
+const getTaskByUserId = async ():Promise<Task[]>=>{
+    const response = await fetch('http://localhost:8080/users/:id/tasks');
+    const tasks:Task[]  = await response.json();
+    return tasks
+
+}
+
 const addTask = async (user : User)=>{
     const requestOptions = {
         method: 'POST',
@@ -26,4 +33,4 @@ const addTask = async (user : User)=>{
 }
 
 
-export {getTask, addTask}
+export {getTask, addTask, getTaskByUserId}

@@ -7,6 +7,7 @@ import Tasks from "./pages/Tasks";
 import Navbar from "./components/navbar";
 import FormTaskPage from "./pages/FormTaskPage";
 import FormUserPage from "./pages/FormUserPage";
+import TaskByUserIdPage from "./pages/TaskByUserIdPage";
 
 
 
@@ -24,6 +25,8 @@ const App : FC = () => {
                 <Route path='/tasks' element={<Tasks />} />
                 <Route path='/addtask' element={<FormTaskPage />} />
                 <Route path='/adduser' element={<FormUserPage />} />
+                <Route path='/users/:id/tasks' element={<TaskByUserIdPage />} />
+
 
 
             </Routes>
