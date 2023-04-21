@@ -1,7 +1,4 @@
-import {useFormik} from "formik";
-import * as Yup from 'yup';
 import React, {useState} from "react";
-import {date} from "yup";
 
 interface FormProps {
     onSubmit: (formData: FormData) => void;
@@ -24,8 +21,8 @@ const FormTask = ({ onSubmit }: FormProps) => {
     const [formData, setFormData] = useState<FormData>({
         user: "",
         name: "",
-        detail: "ok",
-        status: false,
+        detail: "",
+        status: "",
         date: Date.now()
     });
 
@@ -38,7 +35,7 @@ const FormTask = ({ onSubmit }: FormProps) => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         onSubmit(formData);
-        setFormData({   user: "", name: "", detail: "", status: false, date: Date.now() });
+        setFormData({   user: "", name: "", detail: "", status: "", date: Date.now() });
     };
 
     return (
@@ -66,7 +63,7 @@ const FormTask = ({ onSubmit }: FormProps) => {
                 Details :
                 <input
                     type="text"
-                    name="details"
+                    name="detail"
                     value={formData.detail}
                     onChange={handleChange}
                 />
@@ -76,7 +73,7 @@ const FormTask = ({ onSubmit }: FormProps) => {
                 Statut :
                 <input
                     type="text"
-                    name="statut"
+                    name="status"
                     value={formData.status}
                     onChange={handleChange}
                 />
