@@ -1,6 +1,6 @@
 
 export default interface Task{
-    user : string;
+    idUser : string;
     email : string;
     name : string;
     detail : string;

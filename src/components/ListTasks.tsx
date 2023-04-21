@@ -33,7 +33,7 @@ const  ListTasks: FC = ()=>{
                 {tasks.map((val, key)=>{
                     return (
                         <tr key={key}>
-                            <td>{val.user}</td>
+                            <td>{val.idUser}</td>
                             <td>{val.name}</td>
                             <td>{val.detail}</td>
                             <td>{val.status}</td>

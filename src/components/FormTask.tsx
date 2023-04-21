@@ -6,7 +6,7 @@ interface FormProps {
 
 
 interface FormData {
-    user: any;
+    idUser: any;
     name: string;
     detail: string;
     status: any;
@@ -19,7 +19,7 @@ interface FormData {
 
 const FormTask = ({ onSubmit }: FormProps) => {
     const [formData, setFormData] = useState<FormData>({
-        user: "",
+        idUser: "",
         name: "",
         detail: "",
         status: "",
@@ -35,7 +35,7 @@ const FormTask = ({ onSubmit }: FormProps) => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         onSubmit(formData);
-        setFormData({   user: "", name: "", detail: "", status: "", date: Date.now() });
+        setFormData({   idUser: "", name: "", detail: "", status: "", date: Date.now() });
     };
 
     return (
@@ -45,7 +45,7 @@ const FormTask = ({ onSubmit }: FormProps) => {
                 <input
                     type="text"
                     name="user"
-                    value={formData.user}
+                    value={formData.idUser}
                     onChange={handleChange}
                 />
             </label>
