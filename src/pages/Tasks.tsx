@@ -9,7 +9,7 @@ const Tasks:FC = ()=>{
     return(
 
         <header className="App-header">
-            <Title title="PROJET NFP 119"  subtitle='Application de gestion de tâches'  complement="Node JS / React / MongoDB"/>
+            <Title title="Liste des tâches"/>
 
 
 

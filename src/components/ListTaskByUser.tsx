@@ -4,6 +4,8 @@ import {getTask, getUserTasks} from "../services/task.service";
 import user from "../pages/User";
 import { useParams } from "react-router-dom";
 import User from "../pages/User";
+import 'bootstrap/dist/css/bootstrap.css';
+import {createBootstrapComponent} from "react-bootstrap/ThemeProvider";
 
 interface Props {
     id: any;
@@ -17,7 +19,6 @@ const ListTasksByUser:FC<Props> = ({id}: Props) =>{
     useEffect( ()=>{
         const getData = async (id : any)=>{
             const tasks: Task[] = await getUserTasks(id);
-            //TODO Récupérer les taches pourtant bien envoyé côté API
             console.log(tasks);
             setTasks(tasks);
         }
@@ -26,11 +27,10 @@ const ListTasksByUser:FC<Props> = ({id}: Props) =>{
 
     return (
         <div>
-            <h3>Liste des tâches</h3>
+
             <table>
                 <thead>
                 <tr>
-                    <th>ID USER</th>
                     <th>NAME</th>
                     <th>DETAIL</th>
                     <th>STATUT</th>

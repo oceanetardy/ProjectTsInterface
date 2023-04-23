@@ -2,7 +2,7 @@ import React, {FC, useState} from "react";
 
 interface PropTitle {
     title : string;
-    subtitle : string;
+    subtitle? : string;
     complement? : string;
     // ? Donc optionnel
 

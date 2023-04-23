@@ -19,13 +19,13 @@ const  ListUsers: FC = ()=>{
 
     return (
         <div>
-            <h3>Liste des utilisateurs</h3>
             <table>
                 <thead>
                 <tr>
                     <th>NOM</th>
                     <th>EMAIL</th>
-                    <th>ACTION</th>
+                    <th>ACTIONS</th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -36,15 +36,19 @@ const  ListUsers: FC = ()=>{
                             <td>{val.email}</td>
                             <td>
                                 <Link to ={'/users/' + val._id + '/tasks'}>
-                                <button className='iconButton'><IoEyeSharp /></button>
+                                <button className='iconButton'><IoEyeSharp /> Voir les tâches</button>
                             </Link>
-                                <Link to ={'/addtask/' + val._id}>
-                                    <button className='iconButton'><IoAddCircle /></button>
+
+
+                            <Link to ={'/addtask/' + val._id}>
+                                    <button className='iconButton'><IoAddCircle /> Ajouter une tâche</button>
                                 </Link>
                             </td>
+
                         </tr>
-                    )}
+
                 )}
+                    )}
                 </tbody>
 
 

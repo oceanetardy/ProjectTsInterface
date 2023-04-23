@@ -7,6 +7,12 @@ const getTask = async ():Promise<Task[]>=>{
     return tasks
 
 }
+const getTaskId = async (id : any):Promise<Task>=>{
+    const response = await fetch('http://localhost:8080/tasks/' + id);
+    const task : Task= await response.json();
+    return task
+
+}
 
 // const getTaskByUserId = async (userid : any):Promise<Task[]>=>{
 //     const response = await fetch('http://localhost:8080/users/'+ userid + '/tasks');
@@ -51,5 +57,20 @@ const addTask = async (user : User)=>{
 
 }
 
+const updateTask = async (task : Task)=>{
+    const requestOptions = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(task)
+    };
+    try {
+        const response =  await fetch('http://localhost:8080/tasks/:id', requestOptions);
+        const taskSave = await response.json();
+        return taskSave;
+    } catch(e) {
+        console.log(e)
+    }
 
-export {getTask, addTask, getUserTasks}
+
+}
+export {getTask, addTask, getUserTasks, updateTask, getTaskId}

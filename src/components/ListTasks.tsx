@@ -1,6 +1,8 @@
 import React, {FC, useState, useEffect, Dispatch} from "react";
 import Task from "../types/Task";
 import {getTask} from "../services/task.service";
+import {Link} from "react-router-dom";
+import {IoAddCircle, IoEyeSharp, IoPencilSharp} from "react-icons/io5";
 
 const  ListTasks: FC = ()=>{
     const [tasks, setTasks] = useState<Task[]>([]);
@@ -18,11 +20,11 @@ const  ListTasks: FC = ()=>{
 
     return (
         <div>
-            <h3>Liste des tâches</h3>
+
             <table>
                 <thead>
                 <tr>
-                    {/*<th>ID USER</th>*/}
+                    <th>ID USER</th>
                     <th>NAME</th>
                     <th>DETAIL</th>
                     <th>STATUT</th>
@@ -33,12 +35,17 @@ const  ListTasks: FC = ()=>{
                 {tasks.map((val, key)=>{
                     return (
                         <tr key={key}>
-{/*//TODO rajouter nom ou id user*/}
-
+                            <td>{val.user}</td>
                             <td>{val.name}</td>
                             <td>{val.detail}</td>
                             <td>{val.status}</td>
                             <td>{val.date}</td>
+                            <td>
+                                <Link to ={'/tasks/' + val._id }>
+                                    <button className='iconButton'><IoPencilSharp /> Modifier la tâche</button>
+                                </Link>
+
+                            </td>
                         </tr>
                     )
                     }

@@ -8,6 +8,7 @@ import Navbar from "./components/navbar";
 import FormTaskPage from "./pages/FormTaskPage";
 import FormUserPage from "./pages/FormUserPage";
 import TaskByUserIdPage from "./pages/TaskByUserIdPage";
+import FormTaskUpdatePage from "./pages/FormTaskUpdatePage";
 
 
 
@@ -26,6 +27,8 @@ const App : FC = () => {
                 <Route path='/addtask/:userId' element={<FormTaskPage />} />
                 <Route path='/adduser' element={<FormUserPage />} />
                 <Route path='/users/:id/tasks' element={<TaskByUserIdPage />} />
+                <Route path='/tasks/:id' element={<FormTaskUpdatePage />} />
+
 
 
 
