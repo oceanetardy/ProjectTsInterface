@@ -1,54 +1,54 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {getUsers} from "../services/user.service";
+import Select from "react-select";
+
+import User from "../types/User";
+
 
 interface FormProps {
     onSubmit: (formData: FormData) => void;
+    userId? : any
 }
 
 
 interface FormData {
-    idUser: any;
+    user: string;
     name: string;
     detail: string;
     status: any;
     date: number;
-
-
-
 }
 
 
-const FormTask = ({ onSubmit }: FormProps) => {
+const FormTask = ({ onSubmit, userId }: FormProps) => {
     const [formData, setFormData] = useState<FormData>({
-        idUser: "",
+        user: userId ?? "",
         name: "",
         detail: "",
         status: "",
         date: Date.now()
     });
 
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
-        console.log(value);
         setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        console.log(userId)
         onSubmit(formData);
-        setFormData({   idUser: "", name: "", detail: "", status: "", date: Date.now() });
+        setFormData({ user:"", name: "", detail: "", status: "", date: Date.now() });
     };
+
+
+
+
+
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                User :
-                <input
-                    type="text"
-                    name="user"
-                    value={formData.idUser}
-                    onChange={handleChange}
-                />
-            </label>
 
             <label>
                 Name :

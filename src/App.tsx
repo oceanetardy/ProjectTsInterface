@@ -23,9 +23,10 @@ const App : FC = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/users' element={<User />} />
                 <Route path='/tasks' element={<Tasks />} />
-                <Route path='/addtask' element={<FormTaskPage />} />
+                <Route path='/addtask/:userId' element={<FormTaskPage />} />
                 <Route path='/adduser' element={<FormUserPage />} />
                 <Route path='/users/:id/tasks' element={<TaskByUserIdPage />} />
+
 
 
 

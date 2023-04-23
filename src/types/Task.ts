@@ -1,6 +1,8 @@
+import User from "./User";
 
 export default interface Task{
-    idUser : string;
+    _id : string ;
+    user : string;
     email : string;
     name : string;
     detail : string;

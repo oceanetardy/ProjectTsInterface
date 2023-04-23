@@ -7,6 +7,8 @@ import {
     NavBtn,
     NavBtnLink,
 } from './NavbarElements';
+import {Route} from "react-router-dom";
+import TaskByUserIdPage from "../../pages/TaskByUserIdPage";
 
 const Navbar = () => {
     return (
@@ -24,8 +26,11 @@ const Navbar = () => {
                     <NavLink to='/users' >
                         Utilisateurs
                     </NavLink>
-                    {/* Second Nav */}
-                    {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+                    <NavLink to='/users/6444180a50484e6bb0929709/tasks' >
+                        user tasks
+                    </NavLink>
+
+
                 </NavMenu>
             </Nav>
         </>

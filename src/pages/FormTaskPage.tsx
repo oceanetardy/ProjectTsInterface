@@ -6,12 +6,12 @@ import '../assets/css/App.css';
 import FormTask from "../components/FormTask";
 import {addTask} from "../services/task.service";
 import Task from "../types/Task";
+import {useParams} from "react-router-dom";
 
 
 const FormTaskPage:FC = () =>{
-
+    const {userId} = useParams();
     const [tasks, setTask] = useState<Task[] | null>([]);
-    const onclick = () => { alert('click button') };
     const [isOpenForm, setOpenForm] = useState(false);
     const [refresh, setRefresh] = useState(0);
     const sendNewTask = (formData: any) => {
@@ -30,7 +30,7 @@ const FormTaskPage:FC = () =>{
 
 
 
-            <div> <FormTask onSubmit={sendNewTask}/></div>
+            <div> <FormTask onSubmit={sendNewTask} userId = {userId}/></div>
 
 
             <Footer/>

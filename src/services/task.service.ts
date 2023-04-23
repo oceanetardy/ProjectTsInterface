@@ -8,10 +8,29 @@ const getTask = async ():Promise<Task[]>=>{
 
 }
 
-const getTaskByUserId = async ():Promise<Task[]>=>{
-    const response = await fetch('http://localhost:8080/users/:id/tasks');
-    const tasks:Task[]  = await response.json();
-    return tasks
+// const getTaskByUserId = async (userid : any):Promise<Task[]>=>{
+//     const response = await fetch('http://localhost:8080/users/'+ userid + '/tasks');
+//     const tasks:Task[]  = await response.json();
+//     return tasks
+//
+// }
+
+//GET request to get all tasks by user
+//GET request to get all tasks by user
+const getUserTasks = async (id: string) => {
+
+    try {
+
+        const response = await fetch('http://localhost:8080/users/'+id+'/tasks');
+        const tasks = await response.json();
+
+        return tasks;
+
+    }catch (error) {
+
+        console.log(error)
+
+    }
 
 }
 
@@ -33,4 +52,4 @@ const addTask = async (user : User)=>{
 }
 
 
-export {getTask, addTask, getTaskByUserId}
+export {getTask, addTask, getUserTasks}
