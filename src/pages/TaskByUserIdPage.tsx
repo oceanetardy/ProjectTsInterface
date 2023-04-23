@@ -3,9 +3,11 @@ import Footer from "../components/Footer";
 import React, {FC, useState} from "react";
 import '../assets/css/App.css';
 import ListTasksByUser from "../components/ListTaskByUser";
+import { useParams } from "react-router-dom";
 
 
-const TaskByUserIdPage:FC = () =>{
+const TaskByUserIdPage:FC = () => {
+    const {id} = useParams();
 
 
     return (
@@ -14,7 +16,7 @@ const TaskByUserIdPage:FC = () =>{
 
 
 
-            <div> <ListTasksByUser/></div>
+            <div> <ListTasksByUser id = {id}/></div>
 
 
             <Footer/>

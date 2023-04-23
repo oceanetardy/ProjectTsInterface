@@ -1,23 +1,27 @@
 import React, {FC, useState, useEffect, Dispatch} from "react";
 import Task from "../types/Task";
-import {getTask, getTaskByUserId} from "../services/task.service";
+import {getTask, getUserTasks} from "../services/task.service";
 import user from "../pages/User";
 import { useParams } from "react-router-dom";
+import User from "../pages/User";
 
-const  ListTasksByUser: FC = ()=>{
-    const {id} = useParams();
+interface Props {
+    id: any;
+}
+
+const ListTasksByUser:FC<Props> = ({id}: Props) =>{
     const [tasks, setTasks] = useState<Task[]>([]);
     const [refresh] = useState(0);
 
 
     useEffect( ()=>{
-        const getData = async ()=>{
-            const tasks: Task[] = await getTaskByUserId();
+        const getData = async (id : any)=>{
+            const tasks: Task[] = await getUserTasks(id);
             //TODO Récupérer les taches pourtant bien envoyé côté API
             console.log(tasks);
             setTasks(tasks);
         }
-        getData();
+        getData(id);
     },[refresh]);
 
     return (
@@ -37,7 +41,6 @@ const  ListTasksByUser: FC = ()=>{
                 {tasks.map((val, key)=>{
                         return (
                             <tr key={key}>
-                                <td>{val.idUser}</td>
                                 <td>{val.name}</td>
                                 <td>{val.detail}</td>
                                 <td>{val.status}</td>
