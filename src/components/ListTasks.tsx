@@ -22,7 +22,7 @@ const  ListTasks: FC = ()=>{
             <table>
                 <thead>
                 <tr>
-                    <th>ID USER</th>
+                    {/*<th>ID USER</th>*/}
                     <th>NAME</th>
                     <th>DETAIL</th>
                     <th>STATUT</th>
@@ -33,7 +33,8 @@ const  ListTasks: FC = ()=>{
                 {tasks.map((val, key)=>{
                     return (
                         <tr key={key}>
-                            <td>{val.idUser}</td>
+{/*//TODO rajouter nom ou id user*/}
+
                             <td>{val.name}</td>
                             <td>{val.detail}</td>
                             <td>{val.status}</td>

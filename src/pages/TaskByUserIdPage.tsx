@@ -18,6 +18,12 @@ const TaskByUserIdPage:FC = () => {
 
             <div> <ListTasksByUser id = {id}/></div>
 
+            <a
+                className="App-link"
+                href="http://localhost:3000/addtask"
+            >
+                Ajouter une tâche
+            </a>
 
             <Footer/>
 
