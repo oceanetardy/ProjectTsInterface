@@ -26,9 +26,7 @@ const Navbar = () => {
                     <NavLink to='/users' >
                         Utilisateurs
                     </NavLink>
-                    <NavLink to='/users/6444180a50484e6bb0929709/tasks' >
-                        user tasks
-                    </NavLink>
+
 
 
                 </NavMenu>

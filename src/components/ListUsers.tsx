@@ -2,6 +2,7 @@ import React, {FC, useState, useEffect, Dispatch} from "react";
 import User from "../types/User";
 import {getUsers} from "../services/user.service";
 import {IoEyeSharp, IoAddCircle} from 'react-icons/io5';
+import {Link} from "react-router-dom";
 
 const  ListUsers: FC = ()=>{
     const [users, setUsers] = useState<User[]>([]);
@@ -33,7 +34,14 @@ const  ListUsers: FC = ()=>{
                         <tr key={key}>
                             <td>{val.name}</td>
                             <td>{val.email}</td>
-                            <td><button className='iconButton'><IoEyeSharp /></button><button className='iconButton'><IoAddCircle /></button></td>
+                            <td>
+                                <Link to ={'/users/' + val._id + '/tasks'}>
+                                <button className='iconButton'><IoEyeSharp /></button>
+                            </Link>
+                                <Link to ={'/addtask/' + val._id}>
+                                    <button className='iconButton'><IoAddCircle /></button>
+                                </Link>
+                            </td>
                         </tr>
                     )}
                 )}
