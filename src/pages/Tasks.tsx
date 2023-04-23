@@ -15,12 +15,7 @@ const Tasks:FC = ()=>{
 
                 <div> <ListTasks /></div>
 
-            <a
-                className="App-link"
-                href="http://localhost:3000/addtask"
-            >
-                Ajouter une tâche
-            </a>
+
 
 
             <Footer/>
