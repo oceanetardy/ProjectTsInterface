@@ -3,6 +3,8 @@ import Task from "../types/Task";
 import {getTask} from "../services/task.service";
 import {Link} from "react-router-dom";
 import {IoAddCircle, IoEyeSharp, IoPencilSharp} from "react-icons/io5";
+import Button from 'react-bootstrap/Button';
+
 
 const  ListTasks: FC = ()=>{
     const [tasks, setTasks] = useState<Task[]>([]);
@@ -42,7 +44,7 @@ const  ListTasks: FC = ()=>{
                             <td>{val.date}</td>
                             <td>
                                 <Link to ={'/tasks/' + val._id }>
-                                    <button className='iconButton'><IoPencilSharp /> Modifier la tâche</button>
+                                    <Button variant="primary" className='iconButton'><IoPencilSharp /> Modifier la tâche</Button>
                                 </Link>
 
                             </td>
