@@ -3,7 +3,6 @@ import '../assets/css/App.css';
 import Footer from "../components/Footer";
 import ListTasks from "../components/ListTasks";
 import Title from "../components/Title";
-import logo from "../assets/logo.svg";
 import Row from 'react-bootstrap/Row';
 import {Col, Container} from "react-bootstrap";
 

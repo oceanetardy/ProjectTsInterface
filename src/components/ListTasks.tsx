@@ -2,7 +2,7 @@ import React, {FC, useState, useEffect, Dispatch} from "react";
 import Task from "../types/Task";
 import {getTask} from "../services/task.service";
 import {Link} from "react-router-dom";
-import {IoAddCircle, IoEyeSharp, IoPencilSharp} from "react-icons/io5";
+import {IoPencilSharp} from "react-icons/io5";
 import Button from 'react-bootstrap/Button';
 
 

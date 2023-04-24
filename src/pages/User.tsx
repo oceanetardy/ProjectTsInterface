@@ -8,7 +8,6 @@ import {IoAddCircle, IoEyeSharp} from "react-icons/io5";
 import {Link} from "react-router-dom";
 import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
-import ListTasks from "../components/ListTasks";
 
 
 const User:FC = ()=>{

@@ -3,14 +3,13 @@ import Footer from "../components/Footer";
 import '../assets/css/App.css';
 import FormUser from "../components/FormUser";
 import React, {FC, useState, useEffect, Dispatch} from "react";
-import {getUsers, addUser} from "../services/user.service";
+import {addUser} from "../services/user.service";
 import User from "../types/User";
 import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import {IoAddCircle, IoEyeSharp} from "react-icons/io5";
-import ListUsers from "../components/ListUsers";
+import {IoEyeSharp} from "react-icons/io5";
 
 
 

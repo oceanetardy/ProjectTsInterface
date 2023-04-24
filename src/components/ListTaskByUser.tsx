@@ -1,11 +1,8 @@
 import React, {FC, useState, useEffect, Dispatch} from "react";
 import Task from "../types/Task";
-import {getTask, getUserTasks} from "../services/task.service";
-import user from "../pages/User";
-import { useParams } from "react-router-dom";
-import User from "../pages/User";
+import {getUserTasks} from "../services/task.service";
 import 'bootstrap/dist/css/bootstrap.css';
-import {createBootstrapComponent} from "react-bootstrap/ThemeProvider";
+
 
 interface Props {
     id: any;

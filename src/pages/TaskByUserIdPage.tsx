@@ -1,6 +1,6 @@
 import Title from "../components/Title";
 import Footer from "../components/Footer";
-import React, {FC, useState} from "react";
+import React, {FC} from "react";
 import '../assets/css/App.css';
 import ListTasksByUser from "../components/ListTaskByUser";
 import {Link, useParams} from "react-router-dom";
@@ -8,7 +8,6 @@ import Button from "react-bootstrap/Button";
 import {IoAddCircle, IoEyeSharp} from "react-icons/io5";
 import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
-import ListUsers from "../components/ListUsers";
 
 
 const TaskByUserIdPage:FC = () => {

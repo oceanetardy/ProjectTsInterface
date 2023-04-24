@@ -1,5 +1,4 @@
 import Title from "../components/Title";
-import logo from "../assets/logo.svg";
 import Footer from "../components/Footer";
 import React, {FC} from "react";
 import '../assets/css/App.css';

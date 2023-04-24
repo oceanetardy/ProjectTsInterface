@@ -1,5 +1,4 @@
 import Title from "../components/Title";
-import logo from "../assets/logo.svg";
 import Footer from "../components/Footer";
 import React, {FC, useState} from "react";
 import '../assets/css/App.css';
@@ -9,7 +8,6 @@ import Task from "../types/Task";
 import {Link, useParams} from "react-router-dom";
 import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
-import FormUser from "../components/FormUser";
 import Button from "react-bootstrap/Button";
 import {IoEyeSharp} from "react-icons/io5";
 

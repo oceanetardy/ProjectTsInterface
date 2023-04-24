@@ -1,9 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {getUsers} from "../services/user.service";
-import Select from "react-select";
-
-import User from "../types/User";
-import tasks from "../pages/Tasks";
 import Task from "../types/Task";
 
 

@@ -14,15 +14,7 @@ const getTaskId = async (id : any):Promise<Task>=>{
 
 }
 
-// const getTaskByUserId = async (userid : any):Promise<Task[]>=>{
-//     const response = await fetch('http://localhost:8080/users/'+ userid + '/tasks');
-//     const tasks:Task[]  = await response.json();
-//     return tasks
-//
-// }
 
-//GET request to get all tasks by user
-//GET request to get all tasks by user
 const getUserTasks = async (id: string) => {
 
     try {
