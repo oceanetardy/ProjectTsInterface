@@ -3,6 +3,7 @@ import User from "../types/User";
 import {getUsers} from "../services/user.service";
 import {IoEyeSharp, IoAddCircle} from 'react-icons/io5';
 import {Link} from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 const  ListUsers: FC = ()=>{
     const [users, setUsers] = useState<User[]>([]);
@@ -36,12 +37,12 @@ const  ListUsers: FC = ()=>{
                             <td>{val.email}</td>
                             <td>
                                 <Link to ={'/users/' + val._id + '/tasks'}>
-                                <button className='iconButton'><IoEyeSharp /> Voir les tâches</button>
+                                    <Button variant="primary" className='iconButton'><IoEyeSharp /> Voir les tâches</Button>
                             </Link>
 
 
                             <Link to ={'/addtask/' + val._id}>
-                                    <button className='iconButton'><IoAddCircle /> Ajouter une tâche</button>
+                                    <Button variant="primary" className='iconButton'><IoAddCircle /> Ajouter une tâche</Button>
                                 </Link>
                             </td>
 
