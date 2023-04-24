@@ -27,7 +27,7 @@ interface FormData {
 const FormTask = ({ onSubmit, userId , task}: FormProps) => {
     const [formData, setFormData] = useState<FormData>({
         _id: task? task._id : null,
-        user: userId ?? "",
+        user: userId ?? task?.user ?? "",
         name: task && task.name ? task.name : '',
         detail: task && task.detail ? task.detail : '',
         status: task && task.status ? task.status : '',

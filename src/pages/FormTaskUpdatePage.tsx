@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import React, {FC, useState, useEffect} from "react";
 import '../assets/css/App.css';
 import FormTask from "../components/FormTask";
-import {addTask, getTaskId, updateTask} from "../services/task.service";
+import { getTaskId, updateTask} from "../services/task.service";
 import Task from "../types/Task";
 import {Link, useParams} from "react-router-dom";
 import {Col, Container} from "react-bootstrap";

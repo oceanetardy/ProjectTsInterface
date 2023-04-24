@@ -64,7 +64,8 @@ const updateTask = async (task : Task)=>{
         body: JSON.stringify(task)
     };
     try {
-        const response =  await fetch('http://localhost:8080/tasks/:id', requestOptions);
+        console.log(task)
+        const response =  await fetch('http://localhost:8080/tasks/'+task._id, requestOptions);
         const taskSave = await response.json();
         return taskSave;
     } catch(e) {
