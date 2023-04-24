@@ -7,6 +7,9 @@ import FormTask from "../components/FormTask";
 import {addTask} from "../services/task.service";
 import Task from "../types/Task";
 import {useParams} from "react-router-dom";
+import {Col, Container} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import FormUser from "../components/FormUser";
 
 
 const FormTaskPage:FC = () =>{
@@ -26,13 +29,24 @@ const FormTaskPage:FC = () =>{
     }
     return (
         <header className="App-header">
-            <Title title="PROJET NFP 119"  subtitle='Application de gestion de tâches'  complement="Node JS / React / MongoDB"/>
 
 
 
-            <div> <FormTask onSubmit={sendNewTask} userId = {userId}/></div>
+
+            <Container>
+                <Col md={12}>
+                    <Row>
+                        <Title title="Ajouter une tâche"/>
+                    </Row>
+                </Col>
 
 
+                <Row>
+                    <div> <FormTask onSubmit={sendNewTask} userId = {userId}/></div>
+                </Row>
+
+
+            </Container>
             <Footer/>
 
         </header>

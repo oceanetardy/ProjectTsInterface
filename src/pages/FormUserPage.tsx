@@ -5,6 +5,12 @@ import FormUser from "../components/FormUser";
 import React, {FC, useState, useEffect, Dispatch} from "react";
 import {getUsers, addUser} from "../services/user.service";
 import User from "../types/User";
+import {Col, Container} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import {Link} from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import {IoAddCircle} from "react-icons/io5";
+import ListUsers from "../components/ListUsers";
 
 
 
@@ -25,11 +31,26 @@ const FormUserPage:FC = () =>{
     }
     return (
         <header className="App-header">
-            <Title title="PROJET NFP 119"  subtitle='Application de gestion de tâches'  complement="Node JS / React / MongoDB"/>
 
 
 
-            <div> <FormUser onSubmit={sendNewUser} /></div>
+
+
+            <Container>
+                <Col md={12}>
+                    <Row>
+                        <Title title="Ajouter un utilisateur"/>
+                    </Row>
+                </Col>
+
+
+                <Row>
+                    <div> <FormUser onSubmit={sendNewUser} /></div>
+                </Row>
+
+
+            </Container>
+
 
 
             <Footer/>

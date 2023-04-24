@@ -6,6 +6,9 @@ import FormTask from "../components/FormTask";
 import {addTask, getTaskId, updateTask} from "../services/task.service";
 import Task from "../types/Task";
 import {useParams} from "react-router-dom";
+import {Col, Container} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import FormUser from "../components/FormUser";
 
 
 const FormTaskUpdatePage:FC = () =>{
@@ -36,11 +39,25 @@ const FormTaskUpdatePage:FC = () =>{
     }
     return (
         <header className="App-header">
-            <Title title="Modifier la tâche"  />
 
 
 
-            <div> <FormTask onSubmit={sendUpdateTask} task={task}/></div>
+
+
+            <Container>
+                <Col md={12}>
+                    <Row>
+                        <Title title="Modifier la tâche"  />
+                    </Row>
+                </Col>
+
+
+                <Row>
+                    <div> <FormTask onSubmit={sendUpdateTask} task={task}/></div>
+                </Row>
+
+
+            </Container>
 
 
             <Footer/>
