@@ -41,7 +41,7 @@ const  ListTasks: FC = ()=>{
                             <td>{val.name}</td>
                             <td>{val.detail}</td>
                             <td>{val.status}</td>
-                            <td>{val.date}</td>
+                            <td>{val.date.toString().split("T")[0]}</td>
                             <td>
                                 <Link to ={'/tasks/' + val._id }>
                                     <Button variant="primary" className='iconButton'><IoPencilSharp /> Modifier la tâche</Button>

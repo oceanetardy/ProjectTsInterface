@@ -41,7 +41,7 @@ const ListTasksByUser:FC<Props> = ({id}: Props) =>{
                                 <td>{val.name}</td>
                                 <td>{val.detail}</td>
                                 <td>{val.status}</td>
-                                <td>{val.date}</td>
+                                <td>{val.date.toString().split("T")[0]}</td>
                             </tr>
                         )
                     }
