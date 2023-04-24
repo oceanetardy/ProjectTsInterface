@@ -20,7 +20,7 @@ const TaskByUserIdPage:FC = () => {
             <Container>
                 <Col md={12}>
                     <Row>
-                        <Title title="Liste des tâches"/>
+                        <Title title={"Liste des tâches pour l'utilisateur " + id}/>
                     </Row>
                 </Col>
 
@@ -33,6 +33,13 @@ const TaskByUserIdPage:FC = () => {
                 <Row>
                     <Link to ={'/addtask/' + id }>
                         <Button variant="danger" className='iconButton'><IoAddCircle /> Ajouter une tâche</Button>
+                    </Link>
+                </Row>
+
+                <Row>
+
+                    <Link to ={'/users/'}>
+                        <Button variant="primary" className='iconButton'><IoEyeSharp /> Retour aux utilisateurs</Button>
                     </Link>
                 </Row>
 

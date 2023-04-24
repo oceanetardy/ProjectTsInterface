@@ -6,10 +6,12 @@ import '../assets/css/App.css';
 import FormTask from "../components/FormTask";
 import {addTask} from "../services/task.service";
 import Task from "../types/Task";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import FormUser from "../components/FormUser";
+import Button from "react-bootstrap/Button";
+import {IoEyeSharp} from "react-icons/io5";
 
 
 const FormTaskPage:FC = () =>{
@@ -36,7 +38,7 @@ const FormTaskPage:FC = () =>{
             <Container>
                 <Col md={12}>
                     <Row>
-                        <Title title="Ajouter une tâche"/>
+                        <Title title={"Ajouter une tâche pour l'utilisateur  " + userId} />
                     </Row>
                 </Col>
 
@@ -45,7 +47,12 @@ const FormTaskPage:FC = () =>{
                     <div> <FormTask onSubmit={sendNewTask} userId = {userId}/></div>
                 </Row>
 
+                <Row>
 
+                    <Link to ={'/users/' + userId + '/tasks'}>
+                        <Button variant="primary" className='iconButton'><IoEyeSharp /> Retour aux tâches de l'utilisateur</Button>
+                    </Link>
+                </Row>
             </Container>
             <Footer/>
 

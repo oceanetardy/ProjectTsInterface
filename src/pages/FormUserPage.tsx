@@ -9,7 +9,7 @@ import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import {IoAddCircle} from "react-icons/io5";
+import {IoAddCircle, IoEyeSharp} from "react-icons/io5";
 import ListUsers from "../components/ListUsers";
 
 
@@ -48,6 +48,12 @@ const FormUserPage:FC = () =>{
                     <div> <FormUser onSubmit={sendNewUser} /></div>
                 </Row>
 
+                <Row>
+
+                <Link to ={'/users/'}>
+                    <Button variant="primary" className='iconButton'><IoEyeSharp /> Retour aux utilisateurs</Button>
+                </Link>
+                </Row>
 
             </Container>
 

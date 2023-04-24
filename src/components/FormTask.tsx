@@ -49,7 +49,7 @@ const FormTask = ({ onSubmit, userId , task}: FormProps) => {
         event.preventDefault();
         console.log(userId)
         onSubmit(formData);
-        setFormData({ user:"", name: "", detail: "", status: "", date: new Date()});
+        // setFormData({ user:"", name: "", detail: "", status: "", date: new Date()});
     };
 
 

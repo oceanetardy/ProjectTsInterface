@@ -5,10 +5,12 @@ import '../assets/css/App.css';
 import FormTask from "../components/FormTask";
 import {addTask, getTaskId, updateTask} from "../services/task.service";
 import Task from "../types/Task";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {Col, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import FormUser from "../components/FormUser";
+import Button from "react-bootstrap/Button";
+import {IoEyeSharp} from "react-icons/io5";
 
 
 const FormTaskUpdatePage:FC = () =>{
@@ -47,7 +49,7 @@ const FormTaskUpdatePage:FC = () =>{
             <Container>
                 <Col md={12}>
                     <Row>
-                        <Title title="Modifier la tâche"  />
+                        <Title title="Modifier la tâche "   />
                     </Row>
                 </Col>
 
@@ -56,6 +58,12 @@ const FormTaskUpdatePage:FC = () =>{
                     <div> <FormTask onSubmit={sendUpdateTask} task={task}/></div>
                 </Row>
 
+                <Row>
+
+                    <Link to ={'/tasks/'}>
+                        <Button variant="primary" className='iconButton'><IoEyeSharp /> Retour aux tâches</Button>
+                    </Link>
+                </Row>
 
             </Container>
 
