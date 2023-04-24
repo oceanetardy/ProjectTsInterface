@@ -39,6 +39,7 @@ const FormTaskUpdatePage:FC = () =>{
         update(formData);
 
     }
+    if (!task) {return (<div>Chargement....</div>)}
     return (
         <header className="App-header">
 
