@@ -4,19 +4,26 @@ import Footer from "../components/Footer";
 import ListTasks from "../components/ListTasks";
 import Title from "../components/Title";
 import logo from "../assets/logo.svg";
+import Row from 'react-bootstrap/Row';
+import {Col, Container} from "react-bootstrap";
 
 const Tasks:FC = ()=>{
     return(
 
         <header className="App-header">
-            <Title title="Liste des tâches"/>
+            <Container>
+            <Col md={12}>
+                <Row>
+                    <Title title="Liste des tâches"/>
+                </Row>
+            </Col>
 
 
-
+            <Row>
                 <div> <ListTasks /></div>
+            </Row>
 
-
-
+                </Container>
 
             <Footer/>
 

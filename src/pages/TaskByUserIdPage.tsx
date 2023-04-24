@@ -6,6 +6,9 @@ import ListTasksByUser from "../components/ListTaskByUser";
 import {Link, useParams} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import {IoAddCircle, IoEyeSharp} from "react-icons/io5";
+import {Col, Container} from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import ListUsers from "../components/ListUsers";
 
 
 const TaskByUserIdPage:FC = () => {
@@ -14,18 +17,29 @@ const TaskByUserIdPage:FC = () => {
 
     return (
         <header className="App-header">
-            <Title title="Liste des tâches pour le user"  />
+            <Container>
+                <Col md={12}>
+                    <Row>
+                        <Title title="Liste des tâches"/>
+                    </Row>
+                </Col>
 
 
+                <Row>
 
-            <div> <ListTasksByUser id = {id}/></div>
+                    <div> <ListTasksByUser id = {id}/></div>
+                </Row>
 
-            <Link to ={'/addtask/' + id }>
-                <Button variant="danger" className='iconButton'><IoAddCircle /> Ajouter une tâche</Button>
-            </Link>
+                <Row>
+                    <Link to ={'/addtask/' + id }>
+                        <Button variant="danger" className='iconButton'><IoAddCircle /> Ajouter une tâche</Button>
+                    </Link>
+                </Row>
+
+            </Container>
+
 
             <Footer/>
-
         </header>
 
     )}

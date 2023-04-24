@@ -25,7 +25,9 @@ const  ListUsers: FC = ()=>{
                 <tr>
                     <th>NOM</th>
                     <th>EMAIL</th>
-                    <th>ACTIONS</th>
+                    <th><IoEyeSharp /></th>
+                    <th><IoAddCircle /></th>
+
 
                 </tr>
                 </thead>
@@ -39,7 +41,8 @@ const  ListUsers: FC = ()=>{
                                 <Link to ={'/users/' + val._id + '/tasks'}>
                                     <Button variant="primary" className='iconButton'><IoEyeSharp /> Voir les tâches</Button>
                             </Link>
-
+                            </td>
+                            <td>
 
                             <Link to ={'/addtask/' + val._id}>
                                     <Button variant="primary" className='iconButton'><IoAddCircle /> Ajouter une tâche</Button>
